@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+
+    <!-- Contact Information section -->
+    <section>
+        <h2>Contact Information</h2>
+        <form action="order_processing.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+        </form>
+    </section>
+
+    <!-- Pizza Order section -->
+    <section>
+        <h2>Pizza Order</h2>
+        <form action="order_processing.php" method="post">
+            <label for="num_pizzas">Number of Pizzas:</label>
+            <input type="number" id="num_pizzas" name="num_pizzas" min="1" required><br>
+
+            <label for="pizza_size">Pizza Size:</label>
+            <select id="pizza_size" name="Pizza_size" required>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="large">Large</option>
+            </select><br>
+
+            <label for="Crust">Crust:</label>
+            <select id="Crust" name="Crust" required>
+                <option value="Thick Crust">Thick Crust</option>
+                <option value="Regular Crust">Regular Crust</option>
+                <option value="Thin Crust">Thin Crust</option>
+            </select><br>
+
+            <label for="Special Instructions">Special Instructions:</label>
+            <select id="Cooked" name="Cooked" required>
+                <option value="Well Done">Well Done</option>
+                <option value="Deep Dish">Deep Dish</option>
+                <option value="Regular">Regular</option>
+            </select><br>
+
+            <label for="Dough">Dough:</label>
+            <select id="Cooked" name="Cooked" required>
+                <option value="Regular">Regular</option>
+                <option value="Carbone">Carbone</option>
+            </select><br>
+
+            <label>Toppings:</label><br>
+            <input type="checkbox" id="pepperoni" name="topping[]" value="Pepperoni">
+            <label for="pepperoni">Pepperoni</label><br>
+
+            <input type="checkbox" id="mushrooms" name="topping[]" value="Mushrooms">
+            <label for="mushrooms">Mushrooms</label><br>
+
+            <input type="checkbox" id="olives" name="topping[]" value="Olives">
+            <label for="olives">Olives</label><br>
+
+            <input type="checkbox" id="sausage" name="topping[]" value="Sausage">
+            <label for="sausage">Sausage</label><br>
+
+            <input type="checkbox" id="Hot Peppers" name="topping[]" value="Hot Peppers">
+            <label for="Hot Peppers">Hot Peppers</label><br>
+
+            <input type="checkbox" id="Bacon" name="topping[]" value="Bacon">
+            <label for="Bacon">Bacon</label><br>
+
+            <!-- Include similar comments for the other toppings -->
+        </form>
+    </section>
+
+    <!-- Delivery Options section -->
+    <section>
+        <h2>Delivery Options</h2>
+        <form action="order_processing.php" method="post">
+            <label for="delivery_type">Delivery Type:</label><br>
+            <input type="radio" id="delivery" name="delivery_type" value="Delivery">
+            <label for="delivery">Delivery</label><br>
+
+            <input type="radio" id="pickup" name="delivery_type" value="Pickup">
+            <label for="pickup">Pickup</label><br>
+
+            <label for="delivery_address">Delivery Address:</label>
+            <input type="text" id="delivery_address" name="delivery_address"><br>
+        </form>
+    </section>
+
+    <!-- Additional Comments section -->
+    <section>
+        <h2>Additional Comments</h2>
+        <form action="order_processing.php" method="post">
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+        </form>
+    </section>
+
+    <!-- Submit Button section -->
+    <section>
+        <form action="order_processing.php" method="post">
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+</body>
+</html>
